@@ -1,15 +1,15 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>【2024计算机组成原理】垃圾堆里翻出来的复习提纲和问答题 | 惜寒のBlog~</title><meta name="author" content="Xihan"><meta name="copyright" content="Xihan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="日下壁而沉彩，月上轩而飞霜">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>【2024计算机组成原理】垃圾堆里翻出来的复习提纲和问答题 | 惜寒のBlog~</title><meta name="author" content="Xihan"><meta name="copyright" content="Xihan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="复习大纲 计算题（4个）   浮点数的规格化  进制转换（十、二、八、十六）  真值原反补移码转换  加减法（补码），判断溢出  原码一位乘、加减交替法  相对寻址，小端法，二三字节存的编码是啥（主要是PC+1）  给四个左右十六进制数，指出寻址方式和有效地址  中断周期DMA方式和完全中断方式占用CPU处理时间计算（类似于课本208页例题3）  分析题（2个）   卡诺图化简并画出逻辑电路图">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【2024计算机组成原理】垃圾堆里翻出来的复习提纲和问答题">
 <meta property="og:url" content="http://xihan333.github.io/2024/06/16/%E3%80%902024%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E3%80%91%E5%9E%83%E5%9C%BE%E5%A0%86%E9%87%8C%E7%BF%BB%E5%87%BA%E6%9D%A5%E7%9A%84%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2%E5%92%8C%E9%97%AE%E7%AD%94%E9%A2%98/index.html">
 <meta property="og:site_name" content="惜寒のBlog~">
-<meta property="og:description" content="日下壁而沉彩，月上轩而飞霜">
+<meta property="og:description" content="复习大纲 计算题（4个）   浮点数的规格化  进制转换（十、二、八、十六）  真值原反补移码转换  加减法（补码），判断溢出  原码一位乘、加减交替法  相对寻址，小端法，二三字节存的编码是啥（主要是PC+1）  给四个左右十六进制数，指出寻址方式和有效地址  中断周期DMA方式和完全中断方式占用CPU处理时间计算（类似于课本208页例题3）  分析题（2个）   卡诺图化简并画出逻辑电路图">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Xihan333/imgRep/202401210129883.jpg">
 <meta property="article:published_time" content="2024-06-16T05:49:13.000Z">
-<meta property="article:modified_time" content="2024-06-16T05:49:13.576Z">
+<meta property="article:modified_time" content="2024-06-16T05:52:27.741Z">
 <meta property="article:author" content="Xihan">
-<meta property="article:tag" content="这里随便写一些话">
+<meta property="article:tag" content="计组">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Xihan333/imgRep/202401210129883.jpg"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Xihan333/imgRep/202404171111827.png"><link rel="canonical" href="http://xihan333.github.io/2024/06/16/%E3%80%902024%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E3%80%91%E5%9E%83%E5%9C%BE%E5%A0%86%E9%87%8C%E7%BF%BB%E5%87%BA%E6%9D%A5%E7%9A%84%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2%E5%92%8C%E9%97%AE%E7%AD%94%E9%A2%98/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
   root: '/',
@@ -57,8 +57,8 @@
   isPost: true,
   isHome: false,
   isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2024-06-16 13:49:13'
+  isToc: true,
+  postUpdate: '2024-06-16 13:52:27'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -199,7 +199,332 @@
         }
         window.addEventListener('load',endLoading);
     </script>
-    <div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/Xihan333/imgRep/202401210129883.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-sitemap"></i><span> 分站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/cards/"><i class="fa-fw fa-solid fa-book-tanakh"></i><span> 随笔</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa-solid fa-comments"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/linkFri/"><i class="fa-fw fa-solid fa-user-group"></i><span> 友链</span></a></li><li><a class="site-page child" href="/linkWeb/"><i class="fa-fw fa-brands fa-chrome"></i><span> 网站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: rgb(255,255,255,0.1)"><nav id="nav"><span id="blog-info"><a href="/" title="惜寒のBlog~"><span class="site-name">惜寒のBlog~</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-sitemap"></i><span> 分站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/cards/"><i class="fa-fw fa-solid fa-book-tanakh"></i><span> 随笔</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa-solid fa-comments"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/linkFri/"><i class="fa-fw fa-solid fa-user-group"></i><span> 友链</span></a></li><li><a class="site-page child" href="/linkWeb/"><i class="fa-fw fa-brands fa-chrome"></i><span> 网站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">【2024计算机组成原理】垃圾堆里翻出来的复习提纲和问答题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-06-16T05:49:13.000Z" title="发表于 2024-06-16 13:49:13">2024-06-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-06-16T05:49:13.576Z" title="更新于 2024-06-16 13:49:13">2024-06-16</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">0</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="【2024计算机组成原理】垃圾堆里翻出来的复习提纲和问答题"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://Xihan333.github.io">Xihan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://xihan333.github.io/2024/06/16/%E3%80%902024%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E3%80%91%E5%9E%83%E5%9C%BE%E5%A0%86%E9%87%8C%E7%BF%BB%E5%87%BA%E6%9D%A5%E7%9A%84%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2%E5%92%8C%E9%97%AE%E7%AD%94%E9%A2%98/">http://xihan333.github.io/2024/06/16/【2024计算机组成原理】垃圾堆里翻出来的复习提纲和问答题/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://Xihan333.github.io" target="_blank">惜寒のBlog~</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/Xihan333/imgRep/202401210129883.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://img1.imgtp.com/2023/08/26/rcfe86fK.png" target="_blank"><img class="post-qr-code-img" src="https://img1.imgtp.com/2023/08/26/rcfe86fK.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://img1.imgtp.com/2023/08/26/uUblHxRd.jpg" target="_blank"><img class="post-qr-code-img" src="https://img1.imgtp.com/2023/08/26/uUblHxRd.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/06/12/%E3%80%902024%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E3%80%91%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2%E4%B8%8E%E5%BE%80%E5%B9%B4%E9%A2%98/" title="【2024算法设计与分析】复习提纲与往年题"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">【2024算法设计与分析】复习提纲与往年题</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/Xihan333/imgRep/202401210129883.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Xihan</div><div class="author-info__description">日下壁而沉彩，月上轩而飞霜</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xihan333"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Xihan333" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:907405758@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://space.bilibili.com/507870421?spm_id_from=333.1007.0.0" target="_blank" title="哔哩哔哩"><i class="fa-brands fa-bilibili" style="color: #50555E;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">由于小站图床在github上~ 加载文章时可能会无法显示 建议搭配加速器食用嗷❥(^_-)</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/16/%E3%80%902024%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E3%80%91%E5%9E%83%E5%9C%BE%E5%A0%86%E9%87%8C%E7%BF%BB%E5%87%BA%E6%9D%A5%E7%9A%84%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2%E5%92%8C%E9%97%AE%E7%AD%94%E9%A2%98/" title="【2024计算机组成原理】垃圾堆里翻出来的复习提纲和问答题">【2024计算机组成原理】垃圾堆里翻出来的复习提纲和问答题</a><time datetime="2024-06-16T05:49:13.000Z" title="发表于 2024-06-16 13:49:13">2024-06-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/12/%E3%80%902024%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E3%80%91%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2%E4%B8%8E%E5%BE%80%E5%B9%B4%E9%A2%98/" title="【2024算法设计与分析】复习提纲与往年题">【2024算法设计与分析】复习提纲与往年题</a><time datetime="2024-06-12T07:10:21.000Z" title="发表于 2024-06-12 15:10:21">2024-06-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/08/%E4%B8%A4%E5%91%A8%E9%80%9F%E9%80%9A%E8%AE%A1%E7%BB%84%E8%AF%BE%E8%AE%BE%EF%BC%88%E6%8A%A5%E5%91%8A%E7%89%88%EF%BC%89/" title="两周速通计组课设（报告版）">两周速通计组课设（报告版）</a><time datetime="2024-06-08T11:07:25.000Z" title="发表于 2024-06-08 19:07:25">2024-06-08</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2024 By Xihan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">哇，被你发现啦~</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="chat-btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="pjax-reload"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+    <div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/Xihan333/imgRep/202401210129883.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-sitemap"></i><span> 分站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/cards/"><i class="fa-fw fa-solid fa-book-tanakh"></i><span> 随笔</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa-solid fa-comments"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/linkFri/"><i class="fa-fw fa-solid fa-user-group"></i><span> 友链</span></a></li><li><a class="site-page child" href="/linkWeb/"><i class="fa-fw fa-brands fa-chrome"></i><span> 网站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: rgb(255,255,255,0.1)"><nav id="nav"><span id="blog-info"><a href="/" title="惜寒のBlog~"><span class="site-name">惜寒のBlog~</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-sitemap"></i><span> 分站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/cards/"><i class="fa-fw fa-solid fa-book-tanakh"></i><span> 随笔</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fa-solid fa-comments"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> 链接</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/linkFri/"><i class="fa-fw fa-solid fa-user-group"></i><span> 友链</span></a></li><li><a class="site-page child" href="/linkWeb/"><i class="fa-fw fa-brands fa-chrome"></i><span> 网站</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">【2024计算机组成原理】垃圾堆里翻出来的复习提纲和问答题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-06-16T05:49:13.000Z" title="发表于 2024-06-16 13:49:13">2024-06-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-06-16T05:52:27.741Z" title="更新于 2024-06-16 13:52:27">2024-06-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AF%BE%E5%86%85%E5%AD%A6%E4%B9%A0/">课内学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">7.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>21分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="【2024计算机组成原理】垃圾堆里翻出来的复习提纲和问答题"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="复习大纲"><a href="#复习大纲" class="headerlink" title="复习大纲"></a>复习大纲</h1><hr>
+<p><strong>计算题</strong>（4个）</p>
+<ul>
+<li><input disabled="" type="checkbox"> 浮点数的规格化</li>
+<li><input disabled="" type="checkbox"> 进制转换（十、二、八、十六）</li>
+<li><input disabled="" type="checkbox"> 真值原反补移码转换</li>
+<li><input disabled="" type="checkbox"> 加减法（补码），判断溢出</li>
+<li><input disabled="" type="checkbox"> 原码一位乘、加减交替法</li>
+<li><input disabled="" type="checkbox"> 相对寻址，小端法，二三字节存的编码是啥（主要是PC+1）</li>
+<li><input disabled="" type="checkbox"> 给四个左右十六进制数，指出寻址方式和有效地址</li>
+<li><input disabled="" type="checkbox"> 中断周期DMA方式和完全中断方式占用CPU处理时间计算（类似于课本208页例题3）</li>
+</ul>
+<p><strong>分析题</strong>（2个）</p>
+<ul>
+<li><input disabled="" type="checkbox"> 卡诺图化简并画出逻辑电路图</li>
+<li><input disabled="" type="checkbox"> Cache地址映射（<strong>小问题：cache是怎么读取数据的</strong>）四路组相联，求位数和给出内存地址，求映射到的Cache地址……（细节挺多，建议多看些例题）<strong>（往年题考四路组相联居多）</strong></li>
+<li><input disabled="" type="checkbox"> 微操作流程（单总线）<strong>（往年考ADD&#x2F;SUB居多）</strong></li>
+<li><input disabled="" type="checkbox"> 多重中断画图（即屏蔽字相关题目）</li>
+</ul>
+<p><strong>设计题</strong>（2个）</p>
+<ul>
+<li><input disabled="" type="checkbox"> 字位扩展地址分配、设计电路</li>
+<li><input disabled="" type="checkbox"> 微程序设计，分析微操作流程，+时序</li>
+<li><input disabled="" type="checkbox"> <strong>设计一个时序系统（实验）</strong></li>
+<li><input disabled="" type="checkbox"> 加法器</li>
+</ul>
+<p><strong>简答题</strong>（6个）</p>
+<ol>
+<li>怎样区分指令和数据（空间和时间两个层面）</li>
+<li>讨论DMA，分析并比较DMA和程序中断方式，DMA能能否替代程序中断</li>
+<li>寻址方式，各个寻址方式的示意图（解释寄存器间接寻址）</li>
+<li>多重中断流程和屏蔽字</li>
+<li>卡诺图和最简逻辑表达式</li>
+<li>画图并说明微程序控制器中如何根据操作码形成相应微程序入口地址</li>
+<li>举例说明扩展操作码技术</li>
+<li>寻找中断服务程序入口地址的两种方法</li>
+</ol>
+<h1 id="复习内容"><a href="#复习内容" class="headerlink" title="复习内容"></a>复习内容</h1><hr>
+<h2 id="名词概念"><a href="#名词概念" class="headerlink" title="名词概念"></a>名词概念</h2><hr>
+<ol>
+<li><p>存储体：由许多<strong>存储单元</strong>组成，存储单元包含若干个存储元，每个存储元能寄存一位二进制代码“0”或“1”</p>
+</li>
+<li><p><strong>存储单元</strong>：可存储一串二进制代码</p>
+</li>
+<li><p><strong>存储字</strong>：这串二进制代码</p>
+</li>
+<li><p><strong>存储字长</strong>：二进制代码的位数</p>
+</li>
+<li><p>访存：按地址访问存储器</p>
+</li>
+<li><p><strong>MAR</strong>：存储器地址寄存器（Memory Address Register），存放欲访问的存储单元的地址，位数对应存储单元的个数</p>
+</li>
+<li><p><strong>MDR</strong>：存储器数据寄存器（Memory Data Register），存放从存储体某单元取出的代码或准备存入的代码</p>
+</li>
+<li><p>字节：1个字节被定义为由8位二进制代码组成</p>
+</li>
+<li><p>物理地址&#x2F;实地址：主存的实际地址</p>
+<p>逻辑地址&#x2F;虚地址：虚拟存储器的地址空间中的指令地址码（虚拟存储器中的存储单元个数远比实际存储单元的个数大得多）</p>
+</li>
+</ol>
+<h2 id="第一章-计算机系统概论"><a href="#第一章-计算机系统概论" class="headerlink" title="第一章 计算机系统概论"></a>第一章 计算机系统概论</h2><hr>
+<ul>
+<li><input disabled="" type="checkbox"> <strong>冯诺依曼计算机的特点</strong><ol>
+<li>计算机由<strong>运算器，存储器，控制器，输入设备和输出设备</strong>五部分组成</li>
+<li>指令和数据以<strong>同等地位</strong>存放于存储器中，并可按地址寻访（区分方式见下面问题）</li>
+<li>指令和数据均由<strong>二进制数</strong>表示</li>
+<li>指令由<strong>操作码</strong>和<strong>地址码</strong>构成，操作码用来表示操作的性质，地址码用来表示操作数在存储器的位置</li>
+<li>指令在存储器内<em>按顺序存放</em>，通常是按顺序执行，特定条件下可根据运算结果或特定条件改变执行顺序（使用跳转类指令）</li>
+<li><strong>机器以运算器为中心</strong>。</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p><strong>计算机是如何区分指令和数据的</strong>？</p>
+<ol>
+<li><strong>时间层面</strong>：在取指周期（或运行取指微程序）内，由 PC 提供访存地址，取来的即为指令；在执行周期（或运行执行周期相对应的微程序段）内，由指令的地址码部分提供访存地址，取来的即为操作数，也就是数据</li>
+<li><strong>空间层面</strong>：取来的机器指令应存放在<strong>指令寄存器IR</strong>，而取来的数据（或操作数）则应该存放在以累加器为代表的<strong>通用寄存器</strong>内。</li>
+</ol>
+</blockquote>
+<ul>
+<li><p><input disabled="" type="checkbox"> 
+计算机硬件组成框图，说明各部件的作用及计算机硬件的主要技术指标</p>
+<ol>
+<li><p>框图</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Xihan333/imgRep/202406161349565.png" alt="Untitled"></p>
+<p>现代计算机可以认为由三大部分组成：<strong>CPU 、I&#x2F;O 设备及主存储器</strong>。其中，CPU 与主存储器合	起来，称为主机，I&#x2F;O 设备又可称为外部设备。</p>
+</li>
+<li><p>各部件的作用</p>
+<p>CPU包括<strong>运算器</strong>和<strong>控制器</strong>两个部分：其中，ALU是运算器的核心器件，用来完成算数和逻辑运算；CU是控制器的核心器件，用来解释存储器中的指令，并发出各种操作命令来执行指令</p>
+<p>主存储器用来存放程序和数据，可以直接与CPU交换信息</p>
+<p>I&#x2F;O设备受CPU控制，用来完成相应的输入输出操作</p>
+</li>
+<li><p><strong>主要技术指标</strong></p>
+<p><strong>机器字长</strong>：CPU一次能处理数据的位数，通常与CPU寄存器位数有关</p>
+<p><strong>存储容量</strong>：包括主存容量（主存中存放二进制代码的总位数）和辅存容量、</p>
+<blockquote>
+<p>存储容量 &#x3D; 存储单元个数 × 存储字长<br>MAR的位数反映了存储单元的个数，MDR的位数反映了存储字长</p>
+</blockquote>
+<p><strong>运算速度</strong>：与许多因素有有关，如机器的主频、操作类型、主存速度等</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="第四章-存储器"><a href="#第四章-存储器" class="headerlink" title="第四章 存储器"></a>第四章 存储器</h2><hr>
+<ul>
+<li><p><input disabled="" type="checkbox"> 
+存储器分类</p>
+<ol>
+<li><p>按存储介质分类</p>
+<p>半导体存储器、磁表面存储器、磁芯存储器、光盘存储器</p>
+</li>
+<li><p><strong>按存取方式分类</strong></p>
+<p>存取时间与物理地址顺序无关（随机访问）</p>
+<ul>
+<li><p><strong>随机存储器</strong>（RAM，Random Access Memory）</p>
+<p>可读&#x2F;写存储器，存储器的任何一个存储单元的内容都可以<strong>随机存取</strong>，存取时间与存储单元的物理位置无关</p>
+</li>
+<li><p><strong>只读存储器</strong>（ROM，Read Only Memory）</p>
+<p>能对其存储的内容读出，而不能对其重新写入的存储器。用于工业控制的固化程序</p>
+<p>派生出：可编程只读存储器（PROM）、可擦除可编程只读存储器（EPROM）、用电可擦除可编程只读存储器（EEPROM）、闪速存储器（Flash Memory）</p>
+</li>
+</ul>
+<p>存取时间与物理地址顺序有关（串行访问）</p>
+<ul>
+<li>顺序存取存储器：不论信息处在哪个位置，读写时必须从其介质的始端开始按顺序寻找，如磁带存储器</li>
+<li>直接存取存储器（部分串行访问）：读写时，首先直接指出该存储器中的某个小区域，然后再顺序寻访。前段是直接访问，后段是串行访问。如磁盘。</li>
+</ul>
+</li>
+<li><p>按照<strong>作用</strong>分类</p>
+<p>主要分为：主存储器、辅助存储器、缓冲存储器。</p>
+<p>$$<br>存储器 &#x3D;\begin{cases} 主存 \quad \begin{cases} 随机存储器（RAM）\begin{cases} 静态RAM  \ 动态RAM \end{cases}  \ 只读存储器（ROM）\begin{cases} MROM  \ PROM \ EPROM \ EEPROM \end{cases}  \end{cases}  \ 闪速存储器（Flash Memory）  \ 辅存  \quad  \begin{cases} 磁盘 \ 磁带 \ 光盘\end{cases} \ 缓存（Cache） \end{cases}<br>$$</p>
+</li>
+</ol>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+存储器的层次结构</p>
+<p>三个性能指标：速度、容量和每位价格（位价）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Xihan333/imgRep/202406161349565.png" alt="Untitled 1"></p>
+<p><strong>寄存器</strong>中的数直接在<strong>CPU内部参与运算</strong>，它们的速度最快，位价最高，容量最小。主存中存放<strong>将要</strong>参与运行的程序和数据，其<strong>速度与CPU速度差距较大</strong>，为了他们之间能更好地匹配，在中间插入了一种<strong>比主存速度更快、容量更小</strong>的高速缓冲存储器Cache</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Xihan333/imgRep/202406161349296.png" alt="Untitled 2"></p>
+<blockquote>
+<p><strong>存储器的层次结构主要体现在什么地方？为什么要分这些层次？计算机如何管理这些层次？(P71)</strong></p>
+<ol>
+<li>存储器的层次结构主要体现在<strong>Cache-主存</strong>和<strong>主存-辅存</strong>这两个存储层次上。</li>
+<li>Cache-主存层次主要解决<em>CPU和主存速度不匹配</em>的问题，在存储系统中主要对CPU访存起加速作用。从CPU的角度看，该层次的速度接近于Cache，而容量和每位价格却接近于主存。解决了存储器的高速度和低成本之间的矛盾；<br>主存-辅存层次主要解决存储系统的<em>容量</em>问题，在存储系统重主要起扩容作用。从程序员的角度看，其所使用的存储器的容量和每位价格接近于辅存，而速度接近于主存，该层次解决了大容量与低成本之间的矛盾。</li>
+<li>主存和Cache之间的<strong>数据调度</strong>是由硬件<strong>自动完成</strong>的，对程序员是透明的。而主存-辅存之间的数据调度，是由硬件和操作系统（采用虚拟存储技术）共同完成的。</li>
+</ol>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+大端和小端</p>
+<p>大端：<strong>高位字节地址</strong>作为字地址，<strong>高位字节</strong>排放在内存的低地址端</p>
+<p>小端：<strong>低位字节地址</strong>作为字地址，<strong>低位字节</strong>排放在内存的低地址端</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Xihan333/imgRep/202406161342859.png" alt="Untitled 3"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Xihan333/imgRep/202406161350948.png" alt="Untitled 4"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Xihan333/imgRep/202406161350138.png" alt="Untitled 5"></p>
+<blockquote>
+<p>字地址不变！但是它对应的字节地址会随着方法不同发生变化</p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+四类线</p>
+<ol>
+<li><p>地址线：单向输入，位数与芯片容量有关（<strong>1B &#x3D; 8位</strong>）</p>
+</li>
+<li><p>数据线：双向（有的芯片用成对的数据线分别作为输入和输出），位数与芯片可读出或写入的数据位数有关</p>
+<blockquote>
+<p><strong>地址线和数据线共同反映存储芯片的容量</strong><br>地址线10根，数据线4根 ⇒ 芯片容量 $2^{10}×4&#x3D;4K$位</p>
+</blockquote>
+</li>
+<li><p>控制线</p>
+<ol>
+<li>读&#x2F;写控制线：决定芯片进行读写操作</li>
+<li>片选线：选择存储芯片，在半导体存储器中需要用片选信号来确定哪个芯片被选中。（CS\CE）</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/Xihan333/imgRep/202406161349646.png" alt="Untitled 6"></p>
+</li>
+</ol>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+译码方式（线选法&#x2F;重合法）</p>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+SRAM和DRAM</p>
+<ul>
+<li>SRAM：依靠<strong>双稳态触发器</strong>保存二进制代码，只要不断电，信息就不会丢失（非破坏性读出）；<strong>功耗</strong>较大，<strong>集成度</strong>较低，<strong>速度</strong>快，每位<strong>价格</strong>高，适合于作<strong>Cache</strong>或存取速度要求较高的小容量主存。</li>
+<li>DRAM：依靠<strong>电容存储电荷</strong>来保存二进制代码，需刷新电路进行动态刷新，存取<strong>速度</strong>较慢；<strong>功耗</strong>小，<strong>集成度</strong>高，每位<strong>价格</strong>低，适合于作<strong>大容量主存</strong>。</li>
+</ul>
+</li>
+<li><p><input disabled="" type="checkbox"> 
+DRAM的刷新</p>
+<p><strong>原因：</strong></p>
+<ol>
+<li>主要原因：由于电容极板漏抗的存在，存储于电容中的电荷存在泄漏的情况，这会导致DRAM存储单元中的原存信息丢失。</li>
+<li>最常用的<em>单管动态RAM</em>的读出为<strong>破坏性读出</strong></li>
+</ol>
+<p>因此需要按照一定周期进行刷新，通常这个时间为2ms，称为<strong>刷新周期或再生周期</strong>。刷新是一行行进行的。刷新方式有三种：</p>
+<ol>
+<li><strong>集中刷新</strong>：规定的刷新周期内集中一段时间对所有存储单元逐行刷新，此刻必须停止读写操作，死时间连续易发生冲突</li>
+<li><strong>分散刷新</strong>：对每行存储单元的刷新分散到每个存取周期内完成（机器的存取周期分为两段，前半段用来读写或维持信息，后半段用来刷新），存取周期长了，拖慢了系统速度</li>
+<li><strong>异步刷新</strong>：用<em>最大刷新间隔除以单元行数</em>算出每个存储单元行的最大刷新时间间隔，以这个间隔为刷新周期，降低了冲突的概率和死时间</li>
+</ol>
+<h3 id="问答题"><a href="#问答题" class="headerlink" title="问答题"></a>问答题</h3><ul>
+<li><p><strong>存储器的层次结构主要体现在什么地方？为什么要分这些层次？计算机如何管理这些层次？</strong></p>
+<p>1）存储器的层次结构主要体现在Cache—主存和主存—辅存这两个存储层次上。<br>2）Cache—主存层次主要解决CPU和主存速度不匹配的问题，在存储系统中主要对CPU访存起加速作用。从CPU的角度看，该层次的速度接近于Cache，而容量和每位价格却接近于主存。这就解决了存储器的高速度和低成本之间的矛盾；<br>主存—辅存层次主要解决存储系统的容量问题，在存储系统中主要起扩容作用。从程序员的角度看，其所使用的存储器的容量和每位价格接近于辅存，而速度接近于主存。该层次解决了大容量和低成本之间的矛盾。<br>3）主存与Cache之间的数据调度是由硬件自动完成的，对程序员是透明的。而主存—辅存之间的数据调度，是由硬件和操作系统（采用虚拟存储技术）共同完成的。</p>
+</li>
+<li><p><strong>试比较静态RAM和动态RAM各自的特点。</strong></p>
+<p>1）静态RAM：依靠双稳态触发器保存二进制代码，只要不断电，信息就不会丢失；功耗较大，集成度较低，速度快，每位价格高，适合于作Cache或存取速度要求较高的小容量主存。<br>2）动态RAM：依靠电容存储电荷来保存二进制代码，需刷新电路进行动态刷新，存取速度较慢；功耗小，集成度高，每位价格低，适合于作大容量主存。</p>
+</li>
+<li><p><strong>为什么要刷新？简要说明动态RAM刷新的几种方式及其特点。</strong></p>
+<p>1）原因有两点：</p>
+<p>① 主要原因：由于电容极板漏抗的存在，存储于电容中的电荷存在泄漏的情况，这会导致动态RAM存储单元中的原存信息丢失。</p>
+<p>② 此外，最常用的单管动态RAM的读出为破坏性读出。</p>
+<p>综合上述两点，动态RAM必须要进行刷新。</p>
+<p>2）动态RAM的刷新方式有集中式刷新、分散式刷新、异步式刷新和透明式刷新等四种方式。（只答前三种也可）</p>
+<p>****各种刷新方式的特点如下：</p>
+<p><strong>集中式刷新</strong>：在最大刷新间隔时间内，集中安排一段时间进行刷新。其缺点是进行刷新时必须停止读、写操作。这对主机而言是个“死区”</p>
+<p><strong>分散式刷新：</strong>刷新工作安排在系统的存取周期内进行，对主机而言不再有“死区”。但该方式加长了系统的存取周期，存在无谓刷新，降低了整机运行效率。因此，分散方式刷新不适用于高速存储器。</p>
+<p><strong>异步式刷新</strong>：结合了上述两种方式的优点，充分利用了最大刷新间隔。相对于分散式刷新而言，它减少了刷新次数；相对于集中方式来说，主机的“死区”又缩短很多。因此，这种方式使用得比较多。</p>
+<p><strong>透明式刷新</strong>：该方式不占用CPU时间，对CPU而言是透明的操作；但控制线路复杂。</p>
+</li>
+<li><p><strong>以直接映像方式为例，说明在带有Cache的存储系统中，“读”操作是怎样完成的。</strong></p>
+<p>当CPU发出主存地址后，Cache地址映射机构按照直接映射方式将主存地址标记与Cache特定字块的标记进行比较，以判断出所访主存字（主存地址的内容）是否已在Cache中。若命中，直接访问Cache，将该字送至CPU；若未命中，一方面要访问主存，将该字传送给CPU，与此同时，要按照直接映射方式转换的Cache地址将该字所在的主存块装入Cache，如果此时Cache已装满，就要执行替换算法，腾出空位才能将新的主存块调入。</p>
+</li>
+<li><p><strong>计算机是如何区分存储器中的指令和数据的？</strong></p>
+<p>CPU可通过两种手段来区分访存取来的是指令还是数据。<br>1）通过不同的时间段区分：在指令的取指阶段访存取出的是指令；在指令的执行阶段访存取来的即为操作数，也就是数据。<br>2）通过不同的地址来源和目的地址区分：由PC提供访存地址，取来的即为指令，送往指令寄存器IR；由指令的地址码部分提供访存地址取来的是操作数（数据），送往数据寄存器。</p>
+</li>
+<li><p><strong>简述微程序控制器的基本工作原理。</strong></p>
+<ul>
+<li>将控制器所需要的微操作命令（控制信号），以微代码的形式编成微指令，若干条微指令构成微程序，存在CPU的控制存储器中；</li>
+<li>CPU执行机器指令时，找到微程序入口，从控制存储器中逐条取出构成微程序的微指令；</li>
+<li>对微指令中的操作控制字段进行解释，即产生执行机器指令所需的微操作命令序列。</li>
+</ul>
+</li>
+<li><p>微指令后继微地址的形成方式有哪几种？对于其中的根据机器指令的操作码形成微程序入口地址的方法，请画图做出说明。</p>
+<p>1）断定方式。2）微地址形成部件生成。3）增量计数器法（增量方式）。4）分支转移方式。5）通过测试网络形成。6）由硬件产生微程序入口地址。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Xihan333/imgRep/202406161345836.png" alt="Untitled 7"></p>
+<p>如上图所示，机器指令取至指令寄存器后，指令的操作码作为微地址形成部件的输入，来形成微指令的地址。因此，可以把微地址形成部件理解为一个编码器。微地址形成部件可采用PROM实现，即以指令的操作码作为PROM的地址，而相应的存储单元中就存放着对应该指令微程序的首地址。</p>
+</li>
+<li><p>分析比较组合逻辑控制方式和微程序控制方式。</p>
+<p>1）产生微命令的方法及核心器件：组合逻辑控制器由组合逻辑电路提供微命令，其核心器件是由各种门电路构成的复杂树形网络；微程序控制器由存储逻辑(微指令)提供微命令，其核心器件是控制存储器。<br>2）规整性：组合逻辑控制器设计不规整，微程序控制器设计规整；<br>3）可扩展性：组合逻辑控制器不易修改和扩充，后者则易于修改和扩充；<br>4）组合逻辑控制器执行指令快，微程序控制器执行指令速度慢；<br>5）前者多用于RISC架构机器，后者多用于CISC架构的系列机。</p>
+</li>
+<li><p>CPU 响应的中断的条件是什么？响应中断后CPU将进入什么工作周期？该工作周期前后各是什么阶段？</p>
+<p>CPU响应中断的条件可以归纳为三条：<br>1）有中断请求；<br>2）CPU允许中断，即中断允许状态IF&#x3D;1（或EINT&#x3D;1）；<br>3）一条指令执行结束。<br>CPU响应中断的时间：每条指令执行阶段的结束时刻。</p>
+</li>
+<li><p><strong>程序中断方式中“保护现场”的含义是什么？“保护现场”是如何实现的？</strong></p>
+<p>1）保护现场的含义有两重，一是保存程序的断点，二是保存通用寄存器和状态寄存器的内容；</p>
+<p>2）保存程序断点由中断隐指令通过压栈指令完成；而保存通用寄存器和状态寄存器的内容则由中断服务程序完成，通常也是由压栈指令（PUSH）压入堆栈保存。</p>
+</li>
+<li><p>高速外设与主机进行数据交换，为何不选用程序中断方式？应该以何种方式完成？为什么？</p>
+<p>一些高速外设，如硬盘、光盘等I&#x2F;O设备，经常需要和主存进行大批量的数据交换；若采用程序查询方式或程序中断方式来完成，即通过CPU执行程序来完成数据交换，数据交换都是以字或字节为单位，速度较慢，极可能造成数据的丢失，因而不能满足批量数据的高速传递需求。<br>因此，需要借助于硬件，比如DMA控制器来实现主存和高速外设之间的直接数据传送。</p>
+</li>
+<li><p><strong>简述DMA方式和中断方式的异同点？请说明DMA方式不能取代程序中断方式的理由。</strong></p>
+<p><strong>相同点：</strong>1）两种方式均为目前在微型机中主机与外设广泛采用的信息交换方式。2）两种方式下主机和外设之间均可实现一定程度的并行工作。</p>
+<p><strong>不同点体现为如下几个方面</strong>：1）<strong>数据传送：</strong>程序中断方式通过软件（中断服务程序）来完成信息交换；而DMA方式则是通过硬件(DMA控制器）来实现的。2）<strong>响应时间：</strong>前者在一条指令执行结束时响应，后者在一个存取周期结束时响应；3）<strong>随机事件处理能力：</strong>中断传送方式不仅适合于一般的信息交换，还适合对随机事件的处理；DMA方式仅适合简单数据的高速传输；4）<strong>工作过程：</strong>前者是程序切换，需保存现场；后者是总线占有权的 切换，无需保存现场<strong>。</strong>5）<strong>优先级：</strong>通常情况下，DMA请求的优先级高于中断请求的优先级。</p>
+<p>DMA方式不能取代程序中断方式，理由如下：</p>
+<p><strong>1）</strong> DMA方式只能用于高速外设与内存之间的简单数据传递，却不能像中断方式那样能够处理复杂的随机事件；<strong>2）</strong> 在DMA方式的数据传送全过程中，本身需要利用中断方式来完成DMA传送的后处理。</p>
+</li>
+<li><p>简述寻找中断服务程序入口地址的两种方法，各有何特点？</p>
+<p>这两种方法分别是硬件向量法和软件查询法。</p>
+<ul>
+<li>硬件向量法：利用分散设置在各个接口电路或设置在CPU芯片内的专门硬件（向量地址形成部件）产生向量地址，再根据向量地址访问相应内存单元，其内容即为中断服务程序入口地址。该方法速度快，被现代计算机普遍采用。</li>
+<li>软件查询法：利用中断识别程序，按中断源的优先级从高到低，依次查询是哪个中断源发出的中断请求。当查询到某一中断源有中断请求时，通过无条件转移指令，直接跳转到该中断源的中断服务程序入口，机器便能自动进入中断处理。该方法可灵活改变中断源的优先级，控制方便，但查询时间较长。</li>
+</ul>
+</li>
+<li><p><strong>冯诺依曼计算机的特点</strong></p>
+<p>1）计算机由<strong>运算器、控制器、存储器、输入设备、输出设备</strong>五大部件组成；<br>2）指令和数据以同等地位存于存储器，可按地址寻访；<br>3）指令和数据均用二进制数表示；<br>4）指令由操作码和地址码组成；<br>5）采用存储程序思想。指令在存储器内顺序存放，通常自动顺序取出执行；<br>6）机器以运算器为中心。</p>
+</li>
+<li><p><strong>试比较基址寻址和变址寻址</strong></p>
+<p>1）<strong>相同点</strong>：二者都可有效地扩大指令寻址范围。</p>
+<p>2）<strong>不同点</strong>：</p>
+<p>①二者的使用方式不同。变址寻址方式：指令提供基准量不变， R提供修改量可变；适于处理一维数组。基址寻址方式：基址指令提供位移量(不变)， R提供基准量(可变)；适用于扩大有限字长指令的访存空间。</p>
+<p>② 二者的应用目的不同。变址寻址方式面向用户，用于对成批数据的连续的便捷访问；基址寻址方式面向系统，用来解决程序在实际主存中重定位问题（为程序分配存储空间）及扩大访存空间。</p>
+</li>
+<li><p>什么是指令周期？指令周期是否有一个固定值？为什么</p>
+<p>1）指令周期是指CPU每取出并执行一条指令所需的全部时间。<br>2）指令周期不是一个固定值。<br>3）由于计算机指令集中各种指令的操作功能不同，执行该指令时所需完成的微操作复杂程度亦不同。比如，有的指令的执行需安排间址周期，有的指令其执行阶段的操作步骤复杂，如浮点运算指令，因此，指令执行阶段所花的时间有较大差异。<br>若硬性要求所有指令执行时间一致，那么那些执行频率很高的简单指令，其指令周期中很多时间就浪费掉了，这反而会影响到程序的总体执行效率。</p>
+</li>
+<li><p>什么是指令周期、机器周期和时钟周期？三者有何关系</p>
+<p>指令周期：CPU每取出并执行一条指令所需的全部时间叫指令周期；</p>
+<p>机器周期（也叫CPU工作周期）：是在同步控制的机器中，所有指令执行过程中的一个基准时间，通常以访问一次存储器所需的时间作为一个机器周期；</p>
+<p>时钟周期（又叫节拍）：是CPU工作时钟的周期时间（主频的倒数），它是控制计算机操作的最小时间单位。</p>
+<p><strong>三者之间的关系：一个</strong>指令周期包含若干个机器周期，而一个机器周期又包含若干个时钟周期。</p>
+</li>
+<li><p><strong>微指令的操作控制主要有几种编码方式？各有何特点？哪一种控制速度更快？</strong></p>
+<p>一）主要有三种编码方式：1）直接编码方式；2）字段直接编码方式；3）字段间接编码方式。<br>二）特点:    1）直接编码：操作控制字段中，每一位代表一个微命令，简单直观，执行速度快，但微指令字长太长，控存成本高；2）字段直接编码：将互斥的微命令编入一个字段，通过译码产生所需微命令。微指令字长较短，增加了译码时间，减慢了执行速度；3）字段间接编码：一个字段的微命令兼由其它字段来解释。进一步缩短字长，但削弱了并行控制能力。</p>
+</li>
+<li><p><strong>中断隐指令在什么周期执行？其完成的操作有哪些？</strong></p>
+<p>中断隐指令在中断周期完成，即中断周期的操作由硬件完成。主要包括如下的三项操作：<br>1）关中断；2）保存程序断点；3）寻找中断服务程序入口地址。</p>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p>试比较静态RAM和动态RAM的特点</p>
+</li>
+<li><p>在主机和外设之间进行数据传送，为什么需要采用DMA方式？简述DMA方式和中断方式的异同点？</p>
+</li>
+<li><p>计算机是如何区分存储器中的指令和数据的？</p>
+</li>
+<li><p>画图并说明微程序控制器中是如何根据操作码形成相应微程序入口地址的。</p>
+</li>
+<li><p>简述寻找中断服务程序入口地址的两种方法，各有何特点？</p>
+</li>
+<li><p>举例说明扩展操作码的原理。</p>
+</li>
+</ol>
+<ul>
+<li>数据和指令的区别方式</li>
+<li>指令周期机器周期时钟周期是什么，他们之间的联系</li>
+<li>微指令和微操作的关系，微指令和机器指令的关系，微程序和程序的关系</li>
+<li>中断隐指令在什么时期执行，主要执行什么工作</li>
+<li>屏蔽字然后画出cpu的处理过程。就是多重中断的那部分</li>
+</ul>
+<ol>
+<li>根据单管动态RAM芯片，画出图示，说明刷新方式</li>
+<li>组合逻辑控制器和微程序控制器的优缺点对比</li>
+<li>说明原码一位乘的方法</li>
+<li>说明内存和磁盘存储器之间数据交换为何不能用程序中断方式</li>
+<li>举例说明如何扩展操作码</li>
+<li>多重中断响应顺序画图</li>
+</ol>
+<blockquote>
+<p>Notion的Toggle list转md没了 看着真难受呜呜，但是又懒得调了</p>
+<p>将就看吧</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://Xihan333.github.io">Xihan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://xihan333.github.io/2024/06/16/%E3%80%902024%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E3%80%91%E5%9E%83%E5%9C%BE%E5%A0%86%E9%87%8C%E7%BF%BB%E5%87%BA%E6%9D%A5%E7%9A%84%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2%E5%92%8C%E9%97%AE%E7%AD%94%E9%A2%98/">http://xihan333.github.io/2024/06/16/【2024计算机组成原理】垃圾堆里翻出来的复习提纲和问答题/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://Xihan333.github.io" target="_blank">惜寒のBlog~</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%A1%E7%BB%84/">计组</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/Xihan333/imgRep/202401210129883.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://img1.imgtp.com/2023/08/26/rcfe86fK.png" target="_blank"><img class="post-qr-code-img" src="https://img1.imgtp.com/2023/08/26/rcfe86fK.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://img1.imgtp.com/2023/08/26/uUblHxRd.jpg" target="_blank"><img class="post-qr-code-img" src="https://img1.imgtp.com/2023/08/26/uUblHxRd.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/06/12/%E3%80%902024%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E3%80%91%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2%E4%B8%8E%E5%BE%80%E5%B9%B4%E9%A2%98/" title="【2024算法设计与分析】复习提纲与往年题"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">【2024算法设计与分析】复习提纲与往年题</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/Xihan333/imgRep/202401210129883.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Xihan</div><div class="author-info__description">日下壁而沉彩，月上轩而飞霜</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">23</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xihan333"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Xihan333" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:907405758@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://space.bilibili.com/507870421?spm_id_from=333.1007.0.0" target="_blank" title="哔哩哔哩"><i class="fa-brands fa-bilibili" style="color: #50555E;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">由于小站图床在github上~ 加载文章时可能会无法显示 建议搭配加速器食用嗷❥(^_-)</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2"><span class="toc-number">1.</span> <span class="toc-text">复习大纲</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%8D%E4%B9%A0%E5%86%85%E5%AE%B9"><span class="toc-number">2.</span> <span class="toc-text">复习内容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8D%E8%AF%8D%E6%A6%82%E5%BF%B5"><span class="toc-number">2.1.</span> <span class="toc-text">名词概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%AE%BA"><span class="toc-number">2.2.</span> <span class="toc-text">第一章 计算机系统概论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%AD%98%E5%82%A8%E5%99%A8"><span class="toc-number">2.3.</span> <span class="toc-text">第四章 存储器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E7%AD%94%E9%A2%98"><span class="toc-number">2.3.1.</span> <span class="toc-text">问答题</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/16/%E3%80%902024%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E3%80%91%E5%9E%83%E5%9C%BE%E5%A0%86%E9%87%8C%E7%BF%BB%E5%87%BA%E6%9D%A5%E7%9A%84%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2%E5%92%8C%E9%97%AE%E7%AD%94%E9%A2%98/" title="【2024计算机组成原理】垃圾堆里翻出来的复习提纲和问答题">【2024计算机组成原理】垃圾堆里翻出来的复习提纲和问答题</a><time datetime="2024-06-16T05:49:13.000Z" title="发表于 2024-06-16 13:49:13">2024-06-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/12/%E3%80%902024%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E3%80%91%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2%E4%B8%8E%E5%BE%80%E5%B9%B4%E9%A2%98/" title="【2024算法设计与分析】复习提纲与往年题">【2024算法设计与分析】复习提纲与往年题</a><time datetime="2024-06-12T07:10:21.000Z" title="发表于 2024-06-12 15:10:21">2024-06-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/08/%E4%B8%A4%E5%91%A8%E9%80%9F%E9%80%9A%E8%AE%A1%E7%BB%84%E8%AF%BE%E8%AE%BE%EF%BC%88%E6%8A%A5%E5%91%8A%E7%89%88%EF%BC%89/" title="两周速通计组课设（报告版）">两周速通计组课设（报告版）</a><time datetime="2024-06-08T11:07:25.000Z" title="发表于 2024-06-08 19:07:25">2024-06-08</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2024 By Xihan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">哇，被你发现啦~</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat-btn" type="button" title="聊天"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="pjax-reload"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
 for(var i = 0;i<arr.length;i++){
     arr[i].classList.add('wow');
     arr[i].classList.add('animate__fadeInLeft');
